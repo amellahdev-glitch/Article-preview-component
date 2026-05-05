@@ -1,0 +1,157 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --lightGrayBlue: hsl(210, 46%, 95%);
+    --darkBlue: hsl(212, 23%, 69%);
+    --veryDarkBlue: hsl(217, 19%, 35%);
+    --desaturatedDarkBlue: hsl(212, 23%, 69%);
+}
+
+p {
+    font-size: 13px;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--lightGrayBlue);
+}
+
+main {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+/* ___________________________ */
+
+.card {
+    background-color: white;
+    display: flex;
+    width: clamp(10em, 80vw, 70em);
+    border-radius: 15px;
+}
+
+.card .drawers {
+    width: 100%;
+    max-width: 29em;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.container {
+    max-width: 42.8em;
+    padding: 20px;
+    position: relative;
+}
+
+.container h1 {
+    color: var(--veryDarkBlue);
+}
+
+.container p {
+    color: var(--darkBlue);
+    font-size: 1rem;
+    margin: 2rem auto;
+}
+
+/* profile  */
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile .michelle {
+    width: 3em;
+    height: 3em;
+    object-fit: cover;
+    border-radius: 50%;
+
+}
+
+.flex {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.column p:first-of-type {
+    font-weight: bold;
+    color: var(--veryDarkBlue);
+}
+
+.column p {
+    margin: 0;
+    padding: 0.3rem 0;
+}
+
+.profile .share {
+    width: 35px;
+    height: 35px;
+    margin-right: 25px;
+    background-color: var(--veryDarkBlue);
+    padding: 5px;
+    border-radius: 50%;
+    object-fit: none;
+    cursor: pointer;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile .share:active {
+    transform: scale(0.9);
+}
+
+/* menu */
+
+.share-popup {
+    background-color: var(--veryDarkBlue);
+    padding: 10px;
+    border-radius: 7px;
+    position: absolute;
+    right: -10px;
+    bottom: 140px;
+    animation-name: popUp;
+    animation-duration: 0.6s;
+}
+
+@keyframes popUp {
+    from {
+        transform: translateY(10px);
+        opacity: 0.3;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.share-popup span {
+    font-size: 16px;
+    color: var(--lightGrayBlue);
+    float: left;
+}
+
+.share-popup img {
+    margin: 0 5px;
+    cursor: pointer;
+    width: 25px;
+}
+
+.share-popup.active {
+    opacity: 1;
+    display: block !important;
+}
