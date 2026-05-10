@@ -5,7 +5,9 @@ const shareMobile = document.querySelector(".share-mobile")
 
 shareBtn.addEventListener("click", () => {
     popup.classList.toggle("active");
-    profile.classList.toggle("hide");
+    if (window.innerWidth <= 786) {
+        profile.classList.toggle("hide");
+    }
 });
 
 

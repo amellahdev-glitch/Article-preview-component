@@ -156,16 +156,7 @@ main {
     }
 }
 
-/* .share-popup::after {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-width: 10px;
-    border-style: solid;
-    border-color: var(--veryDarkBlue) transparent transparent transparent;
-} */
+
 
 .share-popup p {
     font-size: 16px;
