@@ -142,6 +142,7 @@ main {
     background-color: var(--veryDarkBlue);
     border-radius: 10px;
     transition: 0.3s;
+    visibility: hidden;
 }
 
 @keyframes popUp {
@@ -185,6 +186,7 @@ main {
     width: 40px;
     border-radius: 50%;
     padding: 10px;
+    visibility: hidden;
 }
 
 
@@ -210,12 +212,14 @@ main {
         display: flex;
         align-items: center;
         gap: 15px;
+        visibility: visible;
     }
 
     .share-mobile {
         display: flex;
         justify-content: center;
         align-items: center;
+        visibility: visible;
     }
 
 
