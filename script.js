@@ -1,12 +1,15 @@
-const popUp = document.getElementById("sharePopup")
-const btn = document.getElementById("share")
+const shareBtn = document.querySelector(".share");
+const popup = document.querySelector(".share-popup");
+const profile = document.querySelector(".profile");
+const shareMobile = document.querySelector(".share-mobile")
 
-btn.addEventListener("click", () => {
+shareBtn.addEventListener("click", () => {
+    popup.classList.toggle("active");
+    profile.classList.toggle("hide");
+});
 
-    if (popUp.classList.contains("active")) {
-        popUp.classList.remove("active");
-    } else {
-        popUp.classList.add("active");
-    }
 
+shareMobile.addEventListener("click", () => {
+    popup.classList.toggle("active");
+    profile.classList.toggle("hide");
 });

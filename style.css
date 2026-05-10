@@ -99,6 +99,11 @@ main {
     padding: 0.3rem 0;
 }
 
+.hide {
+    display: none;
+}
+
+
 .profile .share {
     width: 35px;
     height: 35px;
@@ -124,15 +129,16 @@ main {
 
 /* menu */
 
-.share-container {
+.profile {
     position: relative;
 }
 
 .share-popup {
+    display: flex;
     position: absolute;
-    left: 50%;
-    bottom: calc(100% + 15px);
-    transform: translateX(-50%);
+    right: 0;
+    /* bottom: calc(100% + 15px); */
+    transform: translateY(-150px);
     background-color: var(--veryDarkBlue);
     border-radius: 10px;
     transition: 0.3s;
@@ -161,7 +167,7 @@ main {
     border-color: var(--veryDarkBlue) transparent transparent transparent;
 } */
 
-.share-popup span {
+.share-popup p {
     font-size: 16px;
     color: var(--lightGrayBlue);
     padding: 0 15px;
@@ -181,6 +187,16 @@ main {
     visibility: visible;
 }
 
+.share-mobile {
+    display: none;
+    background-color: var(--desaturatedDarkBlue);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+
 @media (min-width: 320px) and (max-width: 786px) {
     .card {
         flex-direction: column;
@@ -193,6 +209,26 @@ main {
         width: 100%;
         display: block;
     }
+
+    .share-popup {
+        position: static;
+        transform: none;
+        width: 100%;
+        border-radius: 0 0 15px 15px;
+        padding: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .share-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
 
 
 }
