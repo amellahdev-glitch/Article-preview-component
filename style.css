@@ -134,7 +134,7 @@ main {
 }
 
 .share-popup {
-    display: flex;
+    display: none;
     position: absolute;
     right: 0;
     /* bottom: calc(100% + 15px); */
@@ -209,7 +209,7 @@ main {
         width: 100%;
         border-radius: 0 0 15px 15px;
         padding: 1.5rem;
-        display: flex;
+        display: none;
         align-items: center;
         gap: 15px;
         visibility: visible;
